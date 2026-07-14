@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teste de Diástase: descubra em 2 minutos</title>
+<meta name="description" content="Faça o teste de 2 minutos e descubra se a sua barriga que não fecha é diástase abdominal.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 2C13 6 16 8 18 10C16 12 13 14 10 18C7 14 4 12 2 10C4 8 7 6 10 2Z' fill='%23b56576'/%3E%3C/svg%3E">
+
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
+<style>
+  :root{
+    --brand:#b56576;
+    --brand-soft:#d99fa8;
+    --brand-deep:#8a4a59;
+    --cream:#fdf5f3;
+    --sand:#f9ece9;
+    --sand-deep:#f1dcd6;
+    --ink:#3a2a2d;
+    --muted:#6e5358;
+    --border:#ecd4cf;
+    --shadow:0 8px 24px rgba(181, 101, 118, 0.10);
+    --radius:18px;
+    --serif: 'Georgia', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html, body{margin:0;padding:0}
+  body{
+    background: linear-gradient(180deg, var(--sand) 0%, var(--sand-deep) 100%);
+    background-attachment: fixed;
+    color:var(--ink);
+    font-family: var(--sans);
+    letter-spacing:-0.005em;
+    min-height:100vh;
+  }
+  a{text-decoration:none}
+  button, .opt { -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; }
+
+  body::before {
+    content: ''; position: fixed; top: -100px; right: -80px;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: radial-gradient(circle, var(--brand-soft) 0%, transparent 70%);
+    opacity: 0.45; pointer-events: none; z-index: 0;
+  }
+
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(253,245,243,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .topbar .inner{max-width:720px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:10px}
+  .topbar .brand-mark{display:flex;align-items:center;gap:8px}
+  .topbar .eyebrow{font-size:11px;font-weight:700;color:var(--brand-deep);letter-spacing:.18em;text-transform:uppercase}
+  .topbar .meta{margin:2px 0 0;color:var(--muted);font-size:11px;letter-spacing:.04em}
+  .topbar .seal{margin-left:auto;display:none;align-items:center;gap:6px;background:var(--cream);border:1px solid var(--border);padding:7px 12px;border-radius:999px;font-size:11px;font-weight:600;color:var(--brand-deep)}
+  @media(min-width: 480px) { .topbar .seal { display: inline-flex; } }
+
+  .wrap{max-width:720px;margin:0 auto;padding:18px 20px 80px;position:relative;z-index:1}
+
+  .intro {
+    background: var(--cream); border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(181,101,118,0.12);
+    border: 1px solid var(--border); padding: 22px; text-align: center;
+  }
+  .intro .eyebrow-line { display: flex; align-items: center; justify-content:center; gap: 10px; margin-bottom: 10px; }
+  .intro .eyebrow-text { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-deep); font-weight: 700; }
+  .intro h2{
+    font-family: var(--serif); font-size: clamp(24px, 5.5vw, 34px); line-height: 1.12;
+    letter-spacing: -0.015em; font-weight: 400; margin: 4px 0 16px; color: var(--ink); text-wrap: balance;
+  }
+  .intro h2 em { font-style: italic; color: var(--brand); }
+  .intro .hero-img-wrap {
+    position: relative; margin: 0 0 16px; border-radius: 16px; overflow: hidden;
+    background: linear-gradient(135deg, var(--brand-soft), var(--brand)); aspect-ratio: 12/7; border: 1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .intro .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .intro .hero-img-wrap .placeholder { color:#fff; font-family:var(--serif); font-size:14px; opacity:.85; padding:0 20px; line-height:1.4 }
+  .intro .sub{ font-size: 15px; line-height: 1.5; color: var(--ink); margin: 0 0 22px; font-weight: 600; text-wrap: pretty; }
+
+  .btn.primary.pulse { position: relative; isolation: isolate; }
+  .btn.primary.pulse::before {
+    content: ''; position: absolute; inset: 0; border-radius: inherit;
+    background: rgba(16,185,129,0.55); z-index: -1; will-change: transform, opacity; animation: pulseGreen 2s infinite;
+  }
+  @keyframes pulseGreen { 0%{transform:scale(1);opacity:0.7} 70%{transform:scale(1.18);opacity:0} 100%{transform:scale(1.18);opacity:0} }
+
+  .btn{
+    appearance: none; border: 0; cursor: pointer; display: inline-block; padding: 18px 22px;
+    border-radius: 999px; font-family: var(--sans); font-weight: 600; font-size: 15px;
+    letter-spacing: -0.005em; text-align: center; transition: transform .18s ease, box-shadow .18s ease; text-decoration: none;
+  }
+  .btn.full{display:block;width:100%}
+  .btn.primary {
+    background: linear-gradient(135deg, #10b981, #047857); color: #ffffff; border: 1px solid #047857;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+  }
+  .btn.primary:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(16, 185, 129, 0.45); }
+  .btn:active{transform:scale(0.98)}
+  .btn-subtle { display: block; text-align: center; font-size: 11px; color: #6b5443; margin-top: 12px; letter-spacing: 0.02em; }
+
+  .quiz-wrap { max-width: 560px; margin: 0 auto; padding: 20px 20px 60px; }
+  @media(min-width: 760px) { .quiz-wrap { max-width: 620px; } }
+  .quiz-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .chapter-pill { font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+  .chapter-pill::before { content: '✿'; font-size: 11px; }
+  .step-count { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+
+  .progress{ display: flex; gap: 3px; margin: 0 0 28px; align-items: center; }
+  .progress .seg { flex: 1; height: 2px; border-radius: 999px; background: var(--border); transition: background .4s ease; }
+  .progress .seg.done { background: var(--brand); }
+  .progress .seg.current { background: var(--brand-soft); }
+
+  .stats{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start;margin-bottom:20px}
+  .stat-box{ background: var(--cream); border: 1px solid var(--border); border-radius: 999px; padding: 7px 12px; font-size: 11.5px; font-weight: 500; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; }
+  .stat-box strong { color: var(--brand-deep); font-weight: 700; }
+  .stat-box .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); display: inline-block; }
+
+  .q-title{ font-family: var(--serif); font-size: clamp(24px, 5vw, 32px); line-height: 1.1; letter-spacing: -0.015em; margin: 8px 0 26px; font-weight: 400; color: var(--ink); text-wrap: pretty; animation: fadeIn 0.45s ease-out; }
+  .q-label { font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; margin-bottom: 4px; }
+
+  .options{display:grid;gap:10px;margin-top:12px}
+  @media(min-width:760px){.options{grid-template-columns:1fr 1fr}}
+  .opt{
+    text-align: left; padding: 16px 18px; background: var(--cream); color: var(--ink); border: 1px solid var(--border);
+    font-family: var(--sans); font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 16px; transition: all .2s;
+    display: flex; align-items: center; gap: 12px; min-height: 64px; width: 100%; letter-spacing: -0.005em;
+  }
+  .opt:hover { border-color: var(--brand-soft); transform: translateY(-1px); }
+  .opt:active{ transform: scale(0.98); }
+  .opt.selected { background: var(--brand); color: var(--cream); border-color: var(--brand); box-shadow: 0 8px 18px rgba(181,101,118,0.25); }
+  .opt .opt-radio { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--brand-soft); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; background: transparent; transition: all .18s; }
+  .opt.selected .opt-radio { border-color: var(--cream); background: rgba(255,255,255,0.15); }
+  .opt.selected .opt-radio::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--cream); }
+  .opt .opt-emoji { display: none; }
+  .opt .opt-text { flex: 1; line-height: 1.35; }
+
+  .previous-insight{ background: var(--cream); border: 1px solid var(--border); border-left: 3px solid var(--brand); border-radius: 14px; padding: 14px 16px; margin-bottom: 20px; animation: slideDown 0.45s ease-out; position: relative; }
+  .insight-label{ font-size: 10.5px; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .insight-label::before { content: '✿'; }
+  .insight-text{ font-family: var(--serif); font-size: 15px; font-weight: 400; font-style: italic; color: var(--ink); line-height: 1.45; }
+  .insight-text strong{ font-style: normal; color: var(--brand-deep); }
+
+  @keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+  #quiz{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background: linear-gradient(180deg, var(--sand) 0%, var(--sand-deep) 100%);overflow-y:auto;display:none;padding-bottom:60px;}
+  #quiz.show{display:block}
+  #pre{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background: linear-gradient(180deg, var(--sand) 0%, var(--sand-deep) 100%);display:none;align-items:center;justify-content:center;padding:24px}
+  #pre.show{display:flex}
+
+  .loader{ display: flex; flex-direction: column; gap: 16px; align-items: center; justify-content: center; text-align: center; max-width: 420px; width: 100%; padding: 32px; background: var(--cream); border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(181,101,118,0.12); }
+  .loader h3 { font-family: var(--serif); font-size: 24px; line-height: 1.15; color: var(--ink); margin: 8px 0 4px; font-weight: 400; }
+  .loader .pre-progress { width: 100%; max-width: 320px; height: 4px; border-radius: 999px; background: var(--border); overflow: hidden; margin: 6px 0; }
+  .loader .pre-bar { height: 100%; background: var(--brand); width: 0%; transition: width 0.3s ease; }
+  .loader p { color: var(--muted); font-size: 13px; margin: 0; line-height: 1.5; }
+  .spinner{ width:48px;height:48px;border-radius:50%; border:3px solid var(--border); border-top-color: var(--brand); animation: spin 0.9s linear infinite }
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+
+<script>
+  // Pixel Utmify DEDICADO da Priscilla (mesmo ID no quiz e no resultado).
+  window.pixelId = "6a5632795b4898f8aee64b3b";
+  var a = document.createElement("script");
+  a.setAttribute("async", ""); a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script>
+  // Meta Pixel (Priscilla). Base no head: fbq enfileira o PageView do sendEvent
+  // mesmo antes do fbevents.js terminar de baixar.
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2252771808220128');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2252771808220128&ev=PageView&noscript=1" alt=""></noscript>
+<script>
+  // GA4: mede a taxa de passagem do quiz pergunta a pergunta (fora da Meta, sem restrição de saúde).
+  window.GA4_ID = "G-N6QHRLBZ90";
+  if (window.GA4_ID) {
+    var g = document.createElement("script");
+    g.async = true;
+    g.src = "https://www.googletagmanager.com/gtag/js?id=" + window.GA4_ID;
+    document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', window.GA4_ID);
+  }
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="inner">
+    <div class="brand-mark">
+      <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M10 2 C 13 6, 16 8, 18 10 C 16 12, 13 14, 10 18 C 7 14, 4 12, 2 10 C 4 8, 7 6, 10 2Z" stroke="#b56576" stroke-width="1.3" fill="none"/>
+      </svg>
+      <div>
+        <div class="eyebrow">Teste de Diástase</div>
+        <p class="meta">Análise 100% confidencial · Priscilla Céo</p>
+      </div>
+    </div>
+    <span class="seal">● Reabilitação Abdominal</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="intro" class="intro">
+    <div class="eyebrow-line">
+      <span class="eyebrow-text">Teste rápido · 2 min</span>
+    </div>
+
+    <h2>Descubra em 2 minutos se a sua barriga que <em>não fecha</em> é <em>diástase</em>.</h2>
+
+    <div class="hero-img-wrap">
+      <img src="img/priscilla-capa-quiz-720.webp"
+           srcset="img/priscilla-capa-quiz-720.webp 720w, img/priscilla-capa-quiz-1080.webp 1080w"
+           sizes="(max-width: 720px) 100vw, 680px"
+           width="720" height="420" fetchpriority="high" decoding="async"
+           alt="Priscilla Céo, especialista em reabilitação abdominal">
+    </div>
+
+    <p class="sub">Dieta, academia e cinta não resolvem se a causa for estrutural. Responda 28 perguntas rápidas e veja o seu diagnóstico.</p>
+
+    <button class="btn full primary pulse" onclick="App.start()">Fazer meu teste de diástase</button>
+    <p class="btn-subtle">Desenvolvido por Priscilla Céo · Especialista em Reabilitação Abdominal</p>
+  </section>
+
+  <p style="text-align:center;font-size:10.5px;color:var(--muted);opacity:.75;margin-top:22px;line-height:1.7">© Todos os direitos reservados · Priscilla Céo<br>Priscilla Teixeira CEO Frisso · CNPJ 48.091.952/0001-94</p>
+</main>
+
+<section id="quiz">
+  <div class="quiz-wrap">
+    <div class="quiz-top">
+      <span class="chapter-pill" id="chapter-pill">Análise</span>
+      <span class="step-count" id="step-count">01 / 28</span>
+    </div>
+    <div class="progress" id="bar"></div>
+    <div class="stats">
+      <div class="stat-box"><span class="dot"></span>Sinais de diástase: <strong id="sinais-count">0</strong></div>
+      <div class="stat-box">Precisão: <strong id="precisao">0%</strong></div>
+      <div class="stat-box">Tempo: <strong id="tempo-restante">~2min</strong></div>
+    </div>
+    <div id="qwrap"></div>
+  </div>
+</section>
+
+<section id="pre">
+  <div class="loader">
+    <div class="spinner"></div>
+    <h3>Preparando o seu diagnóstico…</h3>
+    <div class="pre-progress"><div class="pre-bar" id="prebar"></div></div>
+    <p id="premsg">Analisando os sinais de diástase abdominal…</p>
+  </div>
+</section>
+
+<script>
+(function() {
+    try {
+        const p = new URLSearchParams(window.location.search);
+        p.forEach((v, k) => {
+            if(k.startsWith('utm_') || k === 'fbclid' || k === 'src' || k === 'sck' || k === 'h') {
+                localStorage.setItem(k, v);
+            }
+        });
+    } catch(e) {}
+})();
+
+const CONFIG = {
+    redirectPath: "resultado/"
+    // Webhooks DESATIVADOS por decisão de 2026-07-14 (sem n8n no momento).
+    // Pra reativar, descomente e preencha:
+    // webhookAnalytics: "https://n8n.SEU-DOMINIO.com.br/webhook/slim8-analytics",
+    // webhookCapi: "https://n8n.SEU-DOMINIO.com.br/webhook/slim8-capi"
+};
+
+// ============================================================================
+// QUIZ DIÁSTASE — 28 PERGUNTAS SPIN
+// Scoring por PERFIL DO SINTOMA: estetico (barriga/aparência) · funcional (dor/postura)
+// Estratégia: NÃO dá grau. Confirma a diástase e gira a faca nas consequências.
+// ============================================================================
+const QUESTIONS = [
+  // ---- FASE 1: SITUAÇÃO (1-7): sintomas visíveis e rotina ----
+  { id:"maternidade", title:"Vamos começar pelo começo. Você já passou por gestação?", options:[
+    { txt:"Sim, tive 1 parto", add:{}, insight:"Na gestação, a parede do abdômen precisa se abrir pra dar espaço pro bebê. Isso é normal. O problema é o que acontece depois do parto." },
+    { txt:"Sim, tive 2 ou mais partos", add:{}, insight:"A cada gestação a parede abdominal se abre de novo. Sem reabilitação específica, na maioria das mulheres ela não volta sozinha." },
+    { txt:"Estou no pós-parto recente", add:{}, insight:"O pós-parto é a janela mais importante. Mas mesmo anos depois dá pra reativar a musculatura certa, fica comigo que eu te explico." },
+    { txt:"Não tive filhos", add:{}, insight:"Diástase também pode aparecer por outros motivos de pressão abdominal. Vamos checar os seus sinais mesmo assim." } ] },
+
+  { id:"barriga_dia", title:"Como está a sua barriga ao longo do dia?", options:[
+    { txt:"Acordo mais lisa e ela estufa até a noite", add:{estetico:3}, insight:"Esse é um sinal clássico. Sem sustentação na frente, os órgãos vão sendo empurrados pra fora ao longo do dia e a barriga estufa." },
+    { txt:"Vive estufada o tempo todo", add:{estetico:2}, insight:"Barriga estufada constante quase nunca é só gordura ou intestino. Costuma ser a parede abdominal sem sustentação." },
+    { txt:"Estufa muito depois das refeições", add:{estetico:2}, insight:"Quando a parede não segura os órgãos, qualquer volume no estômago empurra tudo pra frente. Por isso estufa mesmo comendo pouco." },
+    { txt:"Não estufa, é mais firme", add:{}, insight:"Ótimo sinal. Vamos checar os outros pontos pra entender o seu caso completo." } ] },
+
+  { id:"parece_gravida", title:"Você já se sentiu \"parecendo grávida\" no fim do dia?", options:[
+    { txt:"Sim, direto, me perguntam até se estou grávida", add:{estetico:3}, insight:"Isso machuca, eu sei. E não é exagero seu: é a assinatura visual da diástase, a barriga em formato de gestante mesmo sem gravidez." },
+    { txt:"Às vezes, em alguns dias", add:{estetico:2}, insight:"Esse 'vai e volta' é a parede cedendo conforme o dia avança. Tem causa, e tem solução." },
+    { txt:"Tenho uma pochete que dobra na calça", add:{estetico:2}, insight:"A pochete que dobra por cima da calça é o estufamento da parte de baixo do abdômen sem sustentação." },
+    { txt:"Não", add:{}, insight:"Certo. Seguimos pra mapear os sinais funcionais também." } ] },
+
+  { id:"dor_lombar", title:"Como estão as suas costas, principalmente a lombar, no fim do dia?", options:[
+    { txt:"Doem todo dia, principalmente à tarde/noite", add:{funcional:3}, insight:"Poucas mulheres conectam, mas a dor lombar e a barriga que não fecha têm a MESMA causa. Sem o abdômen sustentando a frente, a coluna trabalha sozinha." },
+    { txt:"Sinto incômodo quando fico muito em pé", add:{funcional:2}, insight:"Quando a frente do corpo não sustenta, a lombar compensa o tempo todo. Por isso cansa e dói." },
+    { txt:"Sinto rigidez ao acordar", add:{funcional:1}, insight:"A musculatura profunda enfraquecida deixa a coluna sem o apoio que deveria ter. O corpo dá esse aviso." },
+    { txt:"Minhas costas estão bem", add:{}, insight:"Bom sinal. Vamos focar nos outros pontos do seu diagnóstico." } ] },
+
+  { id:"levantar_esforco", title:"Você sente esforço pra fazer movimentos simples do dia a dia?", options:[
+    { txt:"Sim, pra levantar do sofá ou da cama", add:{funcional:2}, insight:"Esse esforço é a falta de força do core profundo. É ele que deveria estabilizar o seu tronco em cada movimento." },
+    { txt:"Sim, pra pegar meu filho no colo", add:{funcional:2}, insight:"Pegar peso sem o abdômen ativado joga toda a carga na coluna. Reativar essa musculatura muda o seu dia." },
+    { txt:"Sinto o 'meio' do corpo sem força", add:{funcional:2}, insight:"Essa sensação de fraqueza no centro é exatamente a musculatura profunda que a gestação afrouxou." },
+    { txt:"Não, me movimento sem dificuldade", add:{}, insight:"Ótimo. Vamos continuar checando o restante." } ] },
+
+  { id:"roupa", title:"Como você se sente com as suas roupas hoje?", options:[
+    { txt:"Evito roupa justa por causa da barriga", add:{estetico:2}, insight:"Você não deveria escolher roupa em função de esconder uma barriga que tem solução. Vamos na causa." },
+    { txt:"Minhas roupas pararam de servir na barriga", add:{estetico:2}, insight:"Quando o problema é estrutural, número de manequim não conta a história toda: é a parede abdominal projetada pra frente." },
+    { txt:"Uso peças pra disfarçar o volume", add:{estetico:1}, insight:"Disfarçar alivia por fora, mas não resolve. O que resolve é fechar a parede de dentro pra fora." },
+    { txt:"Me visto tranquila", add:{}, insight:"Que bom. Seguimos." } ] },
+
+  { id:"tempo_problema", title:"Há quanto tempo você convive com isso?", options:[
+    { txt:"Desde a última gestação", add:{}, insight:"Quanto mais tempo a parede fica aberta, mais o corpo se acostuma com a má sustentação. A boa notícia: dá pra reverter com o estímulo certo." },
+    { txt:"Anos, já nem lembro direito", add:{}, insight:"Conviver por anos não significa que é permanente. Significa que ninguém te mostrou o método certo ainda." },
+    { txt:"Está piorando com o tempo", add:{funcional:1}, insight:"A diástase não fica parada esperando. Ela tende a progredir, por isso agir cedo importa tanto." },
+    { txt:"Pouco tempo, é recente", add:{}, insight:"Início é a melhor hora de agir. A musculatura responde mais rápido." } ] },
+
+  // ---- FASE 2: PROBLEMA (8-14): a causa real + autoteste guiado ----
+  { id:"autoteste", title:"Vamos a um teste rápido: deite, dobre os joelhos, ponha os dedos no meio da barriga (na altura do umbigo) e levante levemente a cabeça. Você sente um vão ou afundamento?", options:[
+    { txt:"Sim, cabem 2 dedos ou mais nesse vão", add:{estetico:2, funcional:1}, insight:"<strong>Esse é o sinal mais direto de diástase.</strong> Esse vão é a separação da musculatura que deveria estar fechada e firme." },
+    { txt:"Sinto uma moleza/protuberância no meio", add:{estetico:2}, insight:"Essa moleza no centro é a linha alba afrouxada. É exatamente o ponto que o método certo reativa." },
+    { txt:"Sinto, mas é pequeno", add:{estetico:1}, insight:"Mesmo um vão pequeno já tira a sustentação da parede. Quanto antes reativar, mais simples é fechar." },
+    { txt:"Não consegui sentir nada", add:{}, insight:"Sem problema, o teste manual nem sempre é fácil sozinha. O conjunto das suas respostas já me diz muito." } ] },
+
+  { id:"come_pouco", title:"A sua barriga estufa mesmo quando você come pouco?", options:[
+    { txt:"Sim, estufo do nada", add:{estetico:3}, insight:"Não é digestão lenta nem retenção. É a parede sem sustentação deixando os órgãos sem lugar pra ficar, então qualquer coisa já projeta a barriga." },
+    { txt:"Sim, principalmente à tarde", add:{estetico:2}, insight:"Conforme o dia avança e a musculatura cansa, a sustentação cede mais. Por isso piora à tarde." },
+    { txt:"Só quando exagero", add:{estetico:1}, insight:"Quando a parede está firme, ela acomoda a digestão sem projetar a barriga. A sua está pedindo reativação." },
+    { txt:"Não costumo estufar", add:{}, insight:"Certo, anotado no seu perfil." } ] },
+
+  { id:"dieta", title:"Você já tentou resolver a barriga com dieta?", options:[
+    { txt:"Sim, emagreci mas a barriga continua", add:{estetico:2}, insight:"Faz todo sentido: dieta resolve gordura, não fecha parede abdominal. O seu problema nunca foi só peso." },
+    { txt:"Faço dieta e não muda a barriga", add:{estetico:2}, insight:"A dieta não chega na causa. Por isso o esforço não vira resultado nessa região específica." },
+    { txt:"Já fiz de tudo, cansei de tentar", add:{estetico:1}, insight:"Essa é a fadiga de tentar do jeito errado. Você não falhou, as ferramentas é que não foram feitas pra isso." },
+    { txt:"Nunca foi questão de peso pra mim", add:{}, insight:"Exato. Reforça que a questão é estrutural." } ] },
+
+  { id:"cinta", title:"Você usa ou já usou cinta modeladora pra segurar a barriga?", options:[
+    { txt:"Uso bastante", add:{estetico:1}, insight:"<strong>A cinta faz o pior:</strong> ela aperta por fora e desativa justamente a musculatura que precisaria estar sendo reativada. Esconde por horas e enfraquece no longo prazo." },
+    { txt:"Uso de vez em quando", add:{estetico:1}, insight:"Pra ocasião pontual tudo bem, mas a cinta nunca vai fechar a diástase. Só o estímulo certo da musculatura profunda faz isso." },
+    { txt:"Já usei e parei", add:{}, insight:"Boa. A cinta vicia a musculatura na preguiça. Vamos pelo caminho que reativa de verdade." },
+    { txt:"Nunca usei", add:{}, insight:"Ótimo, menos um hábito pra desfazer." } ] },
+
+  { id:"abdominal", title:"E exercícios de barriga, abdominal, prancha?", options:[
+    { txt:"Faço e não vejo resultado", add:{funcional:2}, insight:"<strong>Abdominal tradicional pode PIORAR a diástase.</strong> Ele aumenta a pressão em cima de uma parede já fraca e empurra os órgãos ainda mais pra fora." },
+    { txt:"Faço e sinto a barriga 'saltar' no meio", add:{funcional:2}, insight:"Esse 'salto' no meio durante o abdominal é a diástase aparecendo. É o sinal de que o exercício está sendo feito contra o seu corpo." },
+    { txt:"Tenho medo de fazer e piorar", add:{funcional:1}, insight:"Seu instinto está certo. Sem reativar a musculatura profunda primeiro, o abdominal comum trabalha contra você." },
+    { txt:"Não faço exercício de barriga", add:{}, insight:"Tudo bem. O método certo não é mais exercício, é o exercício certo." } ] },
+
+  { id:"postura", title:"Você sentiu a sua postura mudar depois da gestação?", options:[
+    { txt:"Sim, fiquei mais 'caída' pra frente", add:{funcional:2}, insight:"Sem o abdômen sustentando o tronco, a postura desaba pra frente e a lombar compensa. Tudo conectado à mesma parede." },
+    { txt:"Sinto os ombros e a lombar tensos", add:{funcional:2}, insight:"A tensão sobe porque a base, o seu core, não está estabilizando. Reativar o centro alivia a cadeia toda." },
+    { txt:"Minha barriga 'empurra' a postura", add:{funcional:1}, insight:"A projeção da barriga puxa a sua coluna pra uma curva forçada. Por isso dói e cansa." },
+    { txt:"Minha postura está igual", add:{}, insight:"Certo, anotado." } ] },
+
+  { id:"core_forca", title:"Como está a força do seu \"centro\" (a região do abdômen e tronco)?", options:[
+    { txt:"Sinto totalmente sem força", add:{funcional:3}, insight:"Essa fraqueza no centro é a musculatura profunda desativada. É a que sustenta os órgãos por dentro e fecha a parede." },
+    { txt:"Fraco, canso fácil em esforço", add:{funcional:2}, insight:"O core profundo é o que dá estabilidade. Quando ele dorme, todo esforço fica mais difícil." },
+    { txt:"Razoável, mas não como antes", add:{funcional:1}, insight:"O 'não como antes' é o recado do corpo. Dá pra recuperar com o estímulo correto." },
+    { txt:"Tenho boa força no core", add:{}, insight:"Bom sinal. Seguimos." } ] },
+
+  // ---- FASE 3: IMPLICAÇÃO (15-21): gira a faca ----
+  { id:"autoestima", title:"Sendo sincera: o quanto a sua barriga afeta a sua autoestima?", options:[
+    { txt:"Muito, me sinto mal com o meu corpo", add:{estetico:3}, insight:"Eu entendo profundamente. Você fez algo lindo, gerou um filho, e merece se reconhecer de novo no espelho." },
+    { txt:"Bastante, evito me olhar", add:{estetico:2}, insight:"Você não deveria viver desviando do espelho. Isso muda quando a causa é tratada de verdade." },
+    { txt:"Um pouco, mas me incomoda", add:{estetico:1}, insight:"Cuidado pra não normalizar. Quanto antes agir, mais rápido o corpo responde." },
+    { txt:"Não afeta minha autoestima", add:{}, insight:"Que bom que isso está preservado. Vamos cuidar do resto." } ] },
+
+  { id:"evita", title:"A sua barriga já te fez evitar alguma coisa?", options:[
+    { txt:"Foto, praia, piscina", add:{estetico:2}, insight:"Deixar de viver momentos por causa disso é um preço alto demais pra pagar por algo que tem solução." },
+    { txt:"Momentos íntimos com meu parceiro", add:{estetico:2}, insight:"Isso é mais comum do que você imagina, e dói calado. Recuperar o corpo é recuperar essa liberdade também." },
+    { txt:"Roupas e ocasiões que eu gostava", add:{estetico:1}, insight:"Você merece se vestir e viver sem esse peso. Vamos tratar a origem." },
+    { txt:"Não evito nada", add:{}, insight:"Ótimo. Qualidade de vida preservada." } ] },
+
+  { id:"dor_limita", title:"A dor ou o desconforto nas costas chega a te limitar?", options:[
+    { txt:"Sim, atrapalha minhas tarefas do dia", add:{funcional:3}, insight:"Quando a dor limita o dia, ela parou de ser 'frescura' e virou um aviso sério da falta de sustentação. Isso tende a piorar sem ação." },
+    { txt:"Limita brincar ou carregar meu filho", add:{funcional:2}, insight:"Não poder pegar o seu filho no colo sem dor é exatamente o tipo de coisa que reativar o core devolve." },
+    { txt:"Limita atividade física", add:{funcional:1}, insight:"O corpo evita o que dói. Resolver a base destrava o resto." },
+    { txt:"Não chega a limitar", add:{}, insight:"Certo, anotado." } ] },
+
+  { id:"medo_piora", title:"Você tem medo de que isso piore com o tempo?", options:[
+    { txt:"Sim, tenho medo de piorar", add:{estetico:1, funcional:1}, insight:"Esse medo tem fundamento. A parede aberta tende a ceder mais com os anos. Mas você está agindo agora, e isso muda tudo." },
+    { txt:"Sim, e que vire algo grave", add:{funcional:1}, insight:"Em casos avançados a diástase traz complicações reais. Reativar a musculatura é o caminho de prevenção mais acessível." },
+    { txt:"Penso nisso às vezes", add:{}, insight:"Pensar nisso é sinal de consciência. Agora é transformar em ação." },
+    { txt:"Não penso muito nisso", add:{}, insight:"Tudo bem. Vamos focar no que dá pra resolver hoje." } ] },
+
+  { id:"nao_reconhece", title:"Você sente que não se reconhece no seu corpo depois do parto?", options:[
+    { txt:"Sim, totalmente", add:{estetico:2}, insight:"Essa sensação é real e válida. E ela não é pra sempre: o corpo que gerou pode ser reabilitado." },
+    { txt:"Em parte, sinto falta do que era", add:{estetico:1}, insight:"Não é sobre voltar a ser quem você era, é sobre se sentir bem em quem você é agora." },
+    { txt:"Sinto, mas tento aceitar", add:{}, insight:"Aceitar o corpo é lindo. Mas dor e perda de função não são pra aceitar, são pra tratar." },
+    { txt:"Me reconheço bem", add:{}, insight:"Que bom. Seguimos." } ] },
+
+  { id:"desistiu", title:"Você já desistiu de tentar resolver isso em algum momento?", options:[
+    { txt:"Sim, já achei que não tinha jeito", add:{estetico:1}, insight:"Você não desistiu por fraqueza. Desistiu porque tentou tudo que NÃO ataca a causa. A diferença agora é o método." },
+    { txt:"Sim, cansei de gastar à toa", add:{}, insight:"Cinta, produto, academia sem direção: dinheiro em sintoma. Vamos investir na causa." },
+    { txt:"Quase desisti, mas continuo buscando", add:{}, insight:"Essa busca te trouxe até aqui. Foi a melhor coisa que você podia ter feito." },
+    { txt:"Nunca desisti", add:{}, insight:"Essa determinação vai acelerar os seus resultados." } ] },
+
+  // ---- FASE 4: PONTE / CONSCIÊNCIA (22-28): vilões + comprometimento ----
+  { id:"sabia_abdominal", title:"Você sabia que abdominal e prancha podem PIORAR a diástase?", options:[
+    { txt:"Não sabia disso", add:{}, insight:"Pois é. Eles aumentam a pressão na parede já fraca. Por isso tanta gente treina e a barriga só piora." },
+    { txt:"Desconfiava", add:{}, insight:"Seu instinto estava certo. O caminho é reativar a musculatura profunda primeiro." },
+    { txt:"Sim, já tinha ouvido", add:{}, insight:"Então você já sabe: não é mais esforço, é o estímulo certo." } ] },
+
+  { id:"sabia_cinta", title:"E que a cinta desativa o músculo que precisaria ser reativado?", options:[
+    { txt:"Não fazia ideia", add:{}, insight:"A cinta faz o trabalho que o seu abdômen deveria fazer, então ele 'desliga'. O efeito é o oposto do que você quer." },
+    { txt:"Sempre desconfiei", add:{}, insight:"Exato. Sustentação de verdade vem de dentro, da musculatura ativa." },
+    { txt:"Sim, sabia", add:{}, insight:"Ótimo, então fica claro por que precisamos do método certo." } ] },
+
+  { id:"nao_e_esforco", title:"Você concorda que o seu problema nunca foi falta de esforço, e sim método?", options:[
+    { txt:"Sim, faz total sentido agora", add:{}, insight:"Essa é a virada de chave. Você se esforçou muito, só faltava direcionar esse esforço pro lugar certo." },
+    { txt:"Estou começando a entender", add:{}, insight:"As peças se encaixam: esforço sem método na causa não vira resultado. Com método, vira." },
+    { txt:"Ainda tenho dúvidas", add:{}, insight:"Normal. Por isso eu vou te mostrar exatamente o que fazer, passo a passo." } ] },
+
+  { id:"de_dentro", title:"Se desse pra resolver de dentro pra fora, em casa, sem academia, você toparia?", options:[
+    { txt:"Sim, com certeza", add:{}, insight:"É exatamente assim que funciona: reativando a musculatura profunda, em casa, sem impacto e sem equipamento." },
+    { txt:"Sim, se for simples de seguir", add:{}, insight:"É simples de propósito. Feito pra caber na vida real de uma mãe." },
+    { txt:"Quero entender melhor antes", add:{}, insight:"Justo. O seu diagnóstico na próxima tela vai te mostrar o caminho." } ] },
+
+  { id:"oito_minutos", title:"Você tem 8 minutos por dia pra dedicar a isso?", options:[
+    { txt:"Tenho, 8 minutos eu consigo", add:{}, insight:"É só isso que o método pede. Não tem a ver com quantidade de tempo, tem a ver com o estímulo certo." },
+    { txt:"8 minutos é bem possível", add:{}, insight:"O tempo de tomar um café. Foi por isso que esse desafio foi desenhado assim." },
+    { txt:"Minha rotina é corrida, mas dá", add:{}, insight:"8 minutos cabe até na rotina mais cheia. É o mínimo que gera o máximo, feito na ordem certa." } ] },
+
+  { id:"oito_dias", title:"E está disposta a seguir um método por 8 dias seguidos?", options:[
+    { txt:"Sim, faço o que for preciso", add:{}, insight:"Com essa disposição, em 8 dias você já começa a sentir a diferença na barriga, na postura e na disposição." },
+    { txt:"Sim, se eu for guiada passo a passo", add:{}, insight:"Você vai ser. Uma missão por dia, na ordem exata, sem dúvida do que fazer." },
+    { txt:"Acho que consigo", add:{}, insight:"Consegue sim. São 8 dias que podem virar a chave de anos de frustração." } ] },
+
+  { id:"comeca_hoje", title:"Pra finalizar: se eu te mostrar exatamente o que fazer, você começa hoje?", options:[
+    { txt:"Sim, quero começar agora", add:{}, insight:"Perfeito. Analisando as suas 28 respostas, o seu diagnóstico personalizado está quase pronto." },
+    { txt:"Sim, provavelmente sim", add:{}, insight:"Ótimo. O seu resultado já vai te mostrar o seu perfil e o caminho exato." },
+    { txt:"Quero ver o meu resultado primeiro", add:{}, insight:"Sem problema. Prepare-se: o seu diagnóstico completo está pronto na próxima tela." } ] }
+];
+
+// Rótulos de capítulo (apenas visual no chapter-pill)
+const CHAPTER_MAP = [
+  "Situação","Situação","Situação","Situação","Situação","Situação","Situação",
+  "A causa","A causa","A causa","A causa","A causa","A causa","A causa",
+  "O impacto","O impacto","O impacto","O impacto","O impacto","O impacto","O impacto",
+  "Consciência","Consciência","Consciência","Consciência","Consciência","Consciência","Consciência"
+];
+
+// Preload da VSL a partir de ~70% do quiz (só prefetch, não instancia player).
+// Desativado enquanto o player VTurb for placeholder (evita prefetch 404).
+const VTURB_PLAYER_JS = "https://scripts.converteai.net/2832ef97-4113-4437-b38a-987f9f729ea8/players/6a54d178d592bb4e7238da52/v4/player.js";
+const VTURB_M3U8       = "https://cdn.converteai.net/2832ef97-4113-4437-b38a-987f9f729ea8/6a54d15b3c9d9bf04f45ae4c/main.m3u8";
+const VSL_PRELOAD_AT_STEP = 20;
+function preloadVslAssets() {
+    if (window.__vslPreloaded) return;
+    if (VTURB_PLAYER_JS.indexOf('TODO') === 0 || VTURB_M3U8.indexOf('TODO') === 0) return; // placeholder: pula
+    window.__vslPreloaded = true;
+    [
+      { rel:'prefetch', as:'script', href:VTURB_PLAYER_JS },
+      { rel:'prefetch', as:'script', href:'https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js' },
+      { rel:'prefetch', as:'fetch',  href:VTURB_M3U8, crossOrigin:'anonymous' }
+    ].forEach(function (cfg) {
+        var link = document.createElement('link');
+        link.rel = cfg.rel; link.href = cfg.href;
+        if (cfg.as) link.as = cfg.as;
+        if (cfg.crossOrigin) link.crossOrigin = cfg.crossOrigin;
+        document.head.appendChild(link);
+    });
+}
+
+const App = {
+    state: {
+        step: 0, score: {}, signsCount: 0,
+        sessionId: 'sess_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now(),
+        answersLog: []
+    },
+
+    start: function(isAuto = false) {
+        if(!isAuto) sendEvent('quiz_start', { category: 'Health' });
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('quiz').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        this.renderQuestion(this.state.step);
+    },
+
+    loadState: function() {
+        try {
+            const saved = localStorage.getItem('slim8_v1_progress');
+            if(saved) {
+                const data = JSON.parse(saved);
+                if(data.completed) { this.state = data; this.doRedirect(); return true; }
+                if(Date.now() - data.ts < 259200000 && data.step < QUESTIONS.length) {
+                    this.state = data; this.start(true); return true;
+                }
+            }
+        } catch(e) {}
+        return false;
+    },
+
+    saveState: function() {
+        this.state.ts = Date.now();
+        localStorage.setItem('slim8_v1_progress', JSON.stringify(this.state));
+    },
+
+    renderProgress: function(index) {
+      const bar = document.getElementById('bar');
+      const total = QUESTIONS.length;
+      let html = '';
+      for (let i = 0; i < total; i++) {
+        let cls = 'seg';
+        if (i < index) cls += ' done';
+        else if (i === index) cls += ' current';
+        html += `<div class="${cls}"></div>`;
+      }
+      bar.innerHTML = html;
+    },
+
+    renderQuestion: function(index) {
+        const q = QUESTIONS[index];
+        if (!q) { this.finish(); return; }
+        const qwrap = document.getElementById('qwrap');
+
+        let insightHTML = '';
+        if (index > 0) {
+            const prevQ = QUESTIONS[index - 1];
+            const lastLog = this.state.answersLog[index - 1];
+            if (lastLog) {
+                const selectedOpt = prevQ.options.find(o => o.txt === lastLog.answer);
+                if (selectedOpt && selectedOpt.insight) {
+                    insightHTML = `
+                    <div class="previous-insight">
+                        <div class="insight-label">Priscilla explica</div>
+                        <div class="insight-text">${selectedOpt.insight}</div>
+                    </div>`;
+                }
+            }
+        }
+
+        qwrap.innerHTML = `
+            ${insightHTML}
+            <div class="q-label">Pergunta ${index + 1}</div>
+            <div class="q-title">${q.title}</div>
+            <div class="options">
+                ${q.options.map((opt, i) => `
+                    <button class="opt" onclick="App.handleAnswer(${index}, ${i}, this)">
+                        <span class="opt-radio"></span>
+                        <span class="opt-text">${opt.txt}</span>
+                    </button>
+                `).join('')}
+            </div>
+        `;
+
+        this.renderProgress(index);
+        document.getElementById('chapter-pill').textContent = CHAPTER_MAP[index] || "Análise";
+        document.getElementById('step-count').textContent = String(index + 1).padStart(2,'0') + ' / ' + String(QUESTIONS.length).padStart(2,'0');
+        document.getElementById('precisao').textContent = Math.round(((index/QUESTIONS.length)*85)+10) + "%";
+        document.getElementById('sinais-count').textContent = this.state.signsCount;
+
+        const remaining = QUESTIONS.length - index;
+        const timeElem = document.getElementById('tempo-restante');
+        if(timeElem) timeElem.textContent = remaining > 10 ? `~2min` : `~${Math.ceil(remaining*5)}s`;
+    },
+
+    handleAnswer: function(qIndex, optIndex, btn) {
+        btn.classList.add('selected');
+        btn.parentElement.querySelectorAll('.opt').forEach(el => { if(el !== btn) el.style.opacity = '0.4'; });
+        if (navigator.vibrate) navigator.vibrate(30);
+
+        const q = QUESTIONS[qIndex];
+        const opt = q.options[optIndex];
+
+        if (opt.add) {
+            for (let k in opt.add) this.state.score[k] = (this.state.score[k] || 0) + opt.add[k];
+            if (Object.values(opt.add).some(v => v > 0)) this.state.signsCount++;
+        }
+
+        this.state.answersLog.push({ step: qIndex + 1, question: q.id, answer: opt.txt });
+        sendEvent('answer', { question: q.id, answer: opt.txt, step: qIndex + 1 });
+
+        this.state.step++;
+        this.saveState();
+        if (this.state.step >= VSL_PRELOAD_AT_STEP) preloadVslAssets();
+
+        setTimeout(() => {
+            this.renderQuestion(this.state.step);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 600);
+    },
+
+    finish: function() {
+        this.state.completed = true;
+        this.saveState();
+        document.getElementById('quiz').classList.remove('show');
+        document.getElementById('pre').classList.add('show');
+
+        let w = 0;
+        const bar = document.getElementById('prebar');
+        const interval = setInterval(() => {
+            w += Math.random() * 15;
+            if (bar) bar.style.width = Math.min(w, 100) + '%';
+            if (w >= 100) { clearInterval(interval); this.doRedirect(); }
+        }, 300);
+
+        sendEvent('quiz_complete', {
+            final_score: this.state.score,
+            total_signs: this.state.signsCount,
+            full_transcript: this.state.answersLog
+        });
+    },
+
+    doRedirect: function() {
+        const finalUrl = new URL(CONFIG.redirectPath, window.location.href);
+        const currentParams = new URLSearchParams(window.location.search);
+        currentParams.forEach((v, k) => finalUrl.searchParams.set(k, v));
+
+        try {
+            for(let i=0; i<localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if(key && (key.startsWith('utm_') || key === 'fbclid' || key === 'src' || key === 'sck')) {
+                    if(!finalUrl.searchParams.has(key)) finalUrl.searchParams.set(key, localStorage.getItem(key));
+                }
+            }
+        } catch(e) {}
+
+        finalUrl.searchParams.set('quiz_session', this.state.sessionId);
+        finalUrl.searchParams.set('signs', this.state.signsCount);
+
+        // main_issue por PERFIL DO SINTOMA: estetico / funcional / misto
+        const e = this.state.score.estetico || 0;
+        const f = this.state.score.funcional || 0;
+        let mainIssue = 'estetico';
+        if (f > e) mainIssue = 'funcional';
+        if ((e + f) > 0 && Math.abs(e - f) <= 2) mainIssue = 'misto';
+        finalUrl.searchParams.set('main_issue', mainIssue);
+
+        window.location.href = finalUrl.toString();
+    }
+};
+
+function sendEvent(evtName, data) {
+    const eventID = `ev_${App.state.sessionId}_${evtName}_${Date.now()}`;
+    const getCookie = (n) => {
+        const v = `; ${document.cookie}`;
+        const p = v.split(`; ${n}=`);
+        if (p.length === 2) return p.pop().split(';').shift();
+        return null;
+    };
+    let fbc = getCookie('_fbc');
+    if (!fbc && window.location.search.includes('fbclid=')) {
+        const params = new URLSearchParams(window.location.search);
+        fbc = 'fb.1.' + Date.now() + '.' + params.get('fbclid');
+    }
+    const userData = { fbp: getCookie('_fbp'), fbc: fbc, user_agent: navigator.userAgent };
+
+    if (typeof fbq !== 'undefined') {
+        // SÓ eventos padrão pro Meta (restrições de saúde; sem trackCustom).
+        // No quiz o único padrão é PageView; Lead/ViewContent oficiais saem do resultado (vsl.js).
+        if (evtName === 'PageView') fbq('track', 'PageView', {}, { eventID: eventID });
+    }
+
+    // GA4 (se ativo): funil pergunta a pergunta, fora da Meta.
+    if (window.gtag && window.GA4_ID) {
+        if (evtName === 'answer') gtag('event', 'quiz_step', { step: data.step, question_id: data.question });
+        else if (evtName !== 'PageView') gtag('event', evtName, {});
+    }
+
+    const payload = {
+        event_name: evtName, event_id: eventID, event_time: Math.floor(Date.now() / 1000),
+        event_source_url: window.location.href, session_id: App.state.sessionId,
+        user_data: userData, custom_data: data,
+        url_params: Object.fromEntries(new URLSearchParams(window.location.search))
+    };
+
+    if (CONFIG.webhookAnalytics) {
+        if(navigator.sendBeacon) navigator.sendBeacon(CONFIG.webhookAnalytics, JSON.stringify(payload));
+        else fetch(CONFIG.webhookAnalytics, { method: 'POST', body: JSON.stringify(payload), mode: 'no-cors' });
+    }
+    if (CONFIG.webhookCapi && ['PageView', 'quiz_start', 'quiz_complete'].includes(evtName)) {
+        // Sem remap: Lead/ViewContent oficiais saem só do resultado (dedup garantido).
+        fetch(CONFIG.webhookCapi, { method: 'POST', body: JSON.stringify({ ...payload, type: 'capi_conversion' }), mode: 'no-cors' });
+    }
+}
+
+sendEvent('PageView', { title: document.title });
+App.loadState();
+</script>
+
+</body>
+</html>
