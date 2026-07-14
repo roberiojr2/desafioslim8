@@ -224,7 +224,7 @@
            alt="Priscilla Céo, especialista em reabilitação abdominal">
     </div>
 
-    <p class="sub">Dieta, academia e cinta não resolvem se a causa for estrutural. Responda 28 perguntas rápidas e veja o seu diagnóstico.</p>
+    <p class="sub">Dieta, academia e cinta não resolvem se a causa for estrutural. Responda o teste rápido e veja o seu diagnóstico em 2 minutos.</p>
 
     <button class="btn full primary pulse" onclick="App.start()">Fazer meu teste de diástase</button>
     <p class="btn-subtle">Desenvolvido por Priscilla Céo · Especialista em Reabilitação Abdominal</p>
@@ -237,7 +237,7 @@
   <div class="quiz-wrap">
     <div class="quiz-top">
       <span class="chapter-pill" id="chapter-pill">Análise</span>
-      <span class="step-count" id="step-count">01 / 28</span>
+      <span class="step-count" id="step-count">0%</span>
     </div>
     <div class="progress" id="bar"></div>
     <div class="stats">
@@ -558,7 +558,8 @@ const App = {
 
         this.renderProgress(index);
         document.getElementById('chapter-pill').textContent = CHAPTER_MAP[index] || "Análise";
-        document.getElementById('step-count').textContent = String(index + 1).padStart(2,'0') + ' / ' + String(QUESTIONS.length).padStart(2,'0');
+        // Sem "X / 28": total escondido pra não gerar fricção. Progresso em %.
+        document.getElementById('step-count').textContent = Math.round((index / QUESTIONS.length) * 100) + '%';
         document.getElementById('precisao').textContent = Math.round(((index/QUESTIONS.length)*85)+10) + "%";
         document.getElementById('sinais-count').textContent = this.state.signsCount;
 
