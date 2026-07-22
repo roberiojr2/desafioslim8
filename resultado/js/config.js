@@ -34,7 +34,7 @@ export const CONFIG = {
   // --- 4. VTURB ---
   vtb: {
     playerSelector: "vturb-smartplayer",
-    playerId: "6a54d178d592bb4e7238da52"
+    playerId: "6a60f0f8f04740fc4cd75f36"
   },
 
   // --- 5. UI ---
