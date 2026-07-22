@@ -76,6 +76,8 @@
   .intro .hero-img-wrap .placeholder { color:#fff; font-family:var(--serif); font-size:14px; opacity:.85; padding:0 20px; line-height:1.4 }
   .intro .sub{ font-size: 15px; line-height: 1.5; color: var(--ink); margin: 0 0 22px; font-weight: 600; text-wrap: pretty; }
 
+  .deadline { font-size: 13.5px; font-weight: 700; color: var(--brand-deep); margin: 0 0 14px; letter-spacing: 0.01em; }
+  .deadline strong { color: var(--brand); }
   .btn.primary.pulse { position: relative; isolation: isolate; }
   .btn.primary.pulse::before {
     content: ''; position: absolute; inset: 0; border-radius: inherit;
@@ -217,16 +219,19 @@
     <h2>Descubra o que faz sua barriga <em>estufar</em> e não diminuir <em>nem emagrecendo</em>.</h2>
 
     <div class="hero-img-wrap">
-      <img src="img/priscilla-capa-quiz-720.webp"
-           srcset="img/priscilla-capa-quiz-720.webp 720w, img/priscilla-capa-quiz-1080.webp 1080w"
+      <img src="img/capa-medicao-720.webp"
+           srcset="img/capa-medicao-720.webp 720w, img/capa-medicao-1080.webp 1080w"
            sizes="(max-width: 720px) 100vw, 680px"
            width="720" height="420" fetchpriority="high" decoding="async"
-           alt="Priscilla Céo, especialista em reabilitação abdominal">
+           alt="Priscilla Céo medindo a cintura de uma aluna com fita métrica">
     </div>
 
     <p class="sub">Dieta, academia e cinta não resolvem se a causa for estrutural. Faça o teste de 2 minutos e receba o seu diagnóstico personalizado.</p>
 
+    <p class="deadline">⏳ O teste sai do ar hoje, <strong id="deadline-date"></strong>, às 23h59.</p>
+
     <button class="btn full primary pulse" onclick="App.start()">Fazer análise da minha barriga</button>
+    <script>document.getElementById('deadline-date').textContent=new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date());</script>
     <p class="btn-subtle">Desenvolvido por Priscilla Céo · Especialista em Reabilitação Abdominal</p>
   </section>
 
