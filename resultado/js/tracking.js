@@ -1,4 +1,4 @@
-import { CONFIG } from './config.js?v=5';
+import { CONFIG } from './config.js?v=6';
 
 // ============================================================================
 // 🎯 TRACKER UNIFICADO - Quiz + VSL + InitiateCheckout

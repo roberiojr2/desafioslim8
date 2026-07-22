@@ -23,7 +23,7 @@ export const CONFIG = {
   checkout: {
     n8nGo: null,
     finalDest: "https://pay.hotmart.com/R106625824G?off=qqftzr3o",
-    productValue: 47.00,        // preço à vista
+    productValue: 97.00,        // preço à vista (12x R$10 no parcelado)
     currency: "BRL",
     contentName: "Desafio Cintura Slim8",
     contentCategory: "Health",
