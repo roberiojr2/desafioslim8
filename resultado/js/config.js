@@ -22,7 +22,7 @@ export const CONFIG = {
   // --- 3. CHECKOUT (VSL → plataforma de pagamento) ---
   checkout: {
     n8nGo: null,
-    finalDest: "https://pay.hotmart.com/R106625824G?off=qqftzr3o",
+    finalDest: "https://pay.hotmart.com/R106625824G?off=xuhd8547",
     productValue: 97.00,        // preço à vista (12x R$10 no parcelado)
     currency: "BRL",
     contentName: "Desafio Cintura Slim8",

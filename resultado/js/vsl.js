@@ -1,5 +1,5 @@
-import { CONFIG } from './config.js?v=6';
-import { Tracker, getUrlParams } from './tracking.js?v=6';
+import { CONFIG } from './config.js?v=7';
+import { Tracker, getUrlParams } from './tracking.js?v=7';
 
 // ============================================================================
 // 🎬 VSL - Página /resultado/ (Desafio Cintura Slim8)
