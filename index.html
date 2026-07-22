@@ -107,12 +107,9 @@
   .quiz-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
   .chapter-pill { font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
   .chapter-pill::before { content: '✿'; font-size: 11px; }
-  .step-count { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
 
-  .progress{ display: flex; gap: 3px; margin: 0 0 28px; align-items: center; }
-  .progress .seg { flex: 1; height: 2px; border-radius: 999px; background: var(--border); transition: background .4s ease; }
-  .progress .seg.done { background: var(--brand); }
-  .progress .seg.current { background: var(--brand-soft); }
+  .progress{ height: 6px; border-radius: 999px; background: var(--border); margin: 0 0 28px; overflow: hidden; }
+  .progress .fill{ height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--brand-soft), var(--brand)); width: 0%; transition: width .6s cubic-bezier(.22,1,.36,1); }
 
   .stats{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-start;margin-bottom:20px}
   .stat-box{ background: var(--cream); border: 1px solid var(--border); border-radius: 999px; padding: 7px 12px; font-size: 11.5px; font-weight: 500; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; }
@@ -245,7 +242,6 @@
   <div class="quiz-wrap">
     <div class="quiz-top">
       <span class="chapter-pill" id="chapter-pill">Análise</span>
-      <span class="step-count" id="step-count">0%</span>
     </div>
     <div class="progress" id="bar"></div>
     <div class="stats">
@@ -517,16 +513,14 @@ const App = {
     },
 
     renderProgress: function(index) {
+      // Fakebar: curva generosa (rapida no comeco, lenta no fim). Comeca em 8%
+      // e nunca fecha 100% antes do fim: percepcao de "quase la" segura o complete.
       const bar = document.getElementById('bar');
+      let fill = bar.querySelector('.fill');
+      if (!fill) { bar.innerHTML = '<div class="fill"></div>'; fill = bar.querySelector('.fill'); }
       const total = QUESTIONS.length;
-      let html = '';
-      for (let i = 0; i < total; i++) {
-        let cls = 'seg';
-        if (i < index) cls += ' done';
-        else if (i === index) cls += ' current';
-        html += `<div class="${cls}"></div>`;
-      }
-      bar.innerHTML = html;
+      const fake = 8 + 92 * (1 - Math.pow(1 - index / total, 1.6));
+      fill.style.width = fake.toFixed(1) + '%';
     },
 
     renderQuestion: function(index) {
@@ -566,8 +560,6 @@ const App = {
 
         this.renderProgress(index);
         document.getElementById('chapter-pill').textContent = CHAPTER_MAP[index] || "Análise";
-        // Sem "X / 28": total escondido pra não gerar fricção. Progresso em %.
-        document.getElementById('step-count').textContent = Math.round((index / QUESTIONS.length) * 100) + '%';
         document.getElementById('precisao').textContent = Math.round(((index/QUESTIONS.length)*85)+10) + "%";
         document.getElementById('sinais-count').textContent = this.state.signsCount;
 
