@@ -6,7 +6,7 @@
 // ============================================================================
 
 export const CONFIG = {
-  version: "v1_priscilla_diastase",
+  version: "v2_preco97",
 
   // --- 1. TRACKING ---
   // Webhooks DESATIVADOS por decisão de 2026-07-14 (sem n8n no momento).
